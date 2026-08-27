@@ -127,18 +127,19 @@ function initHeroCardTilt() {
    ------------------------------------------------------------------- */
 const projectData = {
   1: {
-    title: 'DevPulse - Real-time Developer Analytics Dashboard',
-    category: 'Full Stack Web',
+    title: 'Barangay Resident Profiling System',
+    category: 'Web Information System',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&auto=format&fit=crop&q=80',
-    tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'GitHub REST API'],
-    description: 'DevPulse aggregates GitHub metrics, PR turnaround velocity, commit frequency, and automated test coverage across engineering teams into unified visual charts.',
+    tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Web System'],
+    description: 'A digital information & profiling management system built to streamline barangay resident demographics, household records, and community administrative services.',
     features: [
-      "Built responsive layout using Tailwind CSS",
-      "Designed clean navigation using Bootstrap components",
-      "Utilized AI assistance to speed up code creation"
+      'Developed responsive UI components using Tailwind CSS and Bootstrap for clean admin navigation.',
+      'Structured resident profiling data tables with fast search, filtering, and record views.',
+      'Leveraged AI-assisted workflows to accelerate frontend layout design and rapid bug resolution.',
+      'Organized modular codebase versioned and hosted on GitHub.'
     ],
-    github: "https://github.com/muslatt/miguelportfolio",
-    demo: "https://github.com/muslatt/miguelportfolio"
+    github: 'https://github.com/BustedElbow/newBarangayProfiling',
+    demo: 'https://github.com/BustedElbow/newBarangayProfiling'
   },
   2: {
     title: 'NeuroDoc - AI Technical Documentation Assistant',
