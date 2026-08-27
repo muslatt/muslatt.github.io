@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Alex Morgan | Software Engineering & Full Stack Intern Portfolio</title>
+  <meta name="title" content="Alex Morgan | Software Engineering & Full Stack Intern Portfolio" />
+  <meta name="description"
+    content="Portfolio of Alex Morgan, Computer Science student and aspiring Software Engineering Intern. Explore my full-stack web projects, AI applications, technical skills, and experience." />
+  <meta name="keywords"
+    content="Software Engineer Intern, Web Developer Portfolio, Computer Science Student, Frontend, Backend, Full Stack Developer, React, Node.js, Python" />
+  <meta name="author" content="Alex Morgan" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alexmorgan.dev/" />
+  <meta property="og:title" content="Alex Morgan | Software Engineering & Full Stack Intern Portfolio" />
+  <meta property="og:description"
+    content="Explore my full-stack web apps, AI tools, technical stack, and software development projects." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop&q=80" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://alexmorgan.dev/" />
+  <meta property="twitter:title" content="Alex Morgan | Software Engineering & Full Stack Intern Portfolio" />
+  <meta property="twitter:description"
+    content="Explore my full-stack web apps, AI tools, technical stack, and software development projects." />
+  <meta property="twitter:image"
+    content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop&q=80" />
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema.org JSON-LD Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Morgan",
+    "jobTitle": "Software Engineering Intern / Computer Science Student",
+    "url": "https://alexmorgan.dev",
+    "sameAs": [
+      "https://github.com/",
+      "https://linkedin.com/in/",
+      "https://twitter.com/"
+    ],
+    "knowsAbout": ["Web Development", "Software Engineering", "Full Stack Development", "Python", "JavaScript", "React", "TypeScript", "Node.js"]
+  }
+  </script>
+</head>
+
+<body>
+
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Alex Morgan Portfolio Home">
+        <span class="logo-badge">&lt;AM/&gt;</span>
+        <span class="logo-text">Alex Morgan<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a></li>
+          <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+          <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+          <li><a href="#experience" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Experience</a></li>
+          <li><a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Switch Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <a href="#contact" class="btn btn-primary btn-sm resume-btn">
+            <span>Hire Me</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section section-padding" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot pulse"></span>
+            <span>Available for Internship & Co-op • Summer / Fall 2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Morgan</span>
+            <br />
+            <span class="typing-container">
+              I build <span id="typingElement" class="typing-text"></span><span class="typing-cursor">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Senior Computer Science student passionate about crafting high-performance full-stack applications,
+            delightful user experiences, and scalable cloud solutions. Ready to bring fresh ideas and high velocity to
+            your engineering team.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Get In Touch</span>
+            </a>
+            <a href="javascript:void(0)" id="downloadCvBtn" class="btn btn-glass" title="Download Resume">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Resume</span>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <span class="social-label">Find me on:</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="mailto:alex.morgan.intern@example.com" class="social-icon" aria-label="Email">
+              <i class="fa-solid fa-at"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="interactive-card" id="heroCard">
+            <div class="card-inner">
+              <div class="card-badge top-right">
+                <i class="fa-solid fa-fire text-accent"></i>
+                <span>Fast Learner</span>
+              </div>
+
+              <div class="card-avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <!-- Premium stylish avatar representation -->
+                <div class="avatar-illustration">
+                  <div class="avatar-code-snippet">
+                    <div class="code-header">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                      <span class="tab-title">engineer.ts</span>
+                    </div>
+                    <pre class="code-body"><code><span class="c-keyword">const</span> intern = {
+  name: <span class="c-str">'Alex Morgan'</span>,
+  gpa: <span class="c-num">3.92</span>,
+  stack: [<span class="c-str">'React'</span>, <span class="c-str">'Node'</span>, <span class="c-str">'Python'</span>],
+  readyToShip: <span class="c-bool">true</span>,
+  code: () => <span class="c-fn">buildAwesomeApps()</span>
+};</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-react">
+                <i class="fa-brands fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="floating-badge badge-python">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="floating-badge badge-ts">
+                <i class="fa-brands fa-js"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="floating-badge badge-docker">
+                <i class="fa-brands fa-docker"></i>
+                <span>Docker</span>
+              </div>
+
+              <div class="card-stats-row">
+                <div class="mini-stat">
+                  <span class="stat-num">12+</span>
+                  <span class="stat-lbl">Projects</span>
+                </div>
+                <div class="mini-stat divider"></div>
+                <div class="mini-stat">
+                  <span class="stat-num">500+</span>
+                  <span class="stat-lbl">Git Commits</span>
+                </div>
+                <div class="mini-stat divider"></div>
+                <div class="mini-stat">
+                  <span class="stat-num">3</span>
+                  <span class="stat-lbl">Hackathons</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-regular fa-id-card"></i> About Me</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="about-card-header">
+              <div class="icon-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3>Who I Am</h3>
+            </div>
+            <p>
+              I am a 3rd-year Computer Science student at <strong>State University of Technology</strong> with a strong
+              foundation in data structures, algorithms, and full-stack software development.
+            </p>
+            <p>
+              Whether it is building responsive React frontends, designing robust REST APIs with Node.js & Express, or
+              experimenting with modern AI workflows, I thrive in collaborative environments where I can learn quickly
+              and deliver measurable value.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-check text-success"></i>
+                <span><strong>Education:</strong> B.S. in Computer Science (Exp. May 2027)</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-check text-success"></i>
+                <span><strong>Location:</strong> San Francisco, CA (Open to Remote / Relocation)</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-check text-success"></i>
+                <span><strong>Interests:</strong> Full-Stack Engineering, Distributed Systems, GenAI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-microchip"></i> Skills & Tooling</span>
+          <h2 class="section-title">My Technical Arsenal</h2>
+          <p class="section-subtitle">Technologies and frameworks I work with to bring ideas to life</p>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Frontend -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="cat-icon cat-frontend"><i class="fa-brands fa-html5"></i></div>
+              <div>
+                <h3>Frontend Engineering</h3>
+                <span class="cat-desc">Building responsive, accessible UIs</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip"><i class="fa-brands fa-react"></i> React</span>
+              <span class="skill-chip"><i class="fa-brands fa-js"></i> TypeScript / JS</span>
+              <span class="skill-chip"><i class="fa-brands fa-vuejs"></i> Next.js</span>
+              <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> Tailwind / Vanilla CSS</span>
+              <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5 & Semantic Web</span>
+              <span class="skill-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="cat-icon cat-backend"><i class="fa-solid fa-server"></i></div>
+              <div>
+                <h3>Backend & APIs</h3>
+                <span class="cat-desc">Designing robust services & schemas</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip"><i class="fa-brands fa-node-js"></i> Node.js / Express</span>
+              <span class="skill-chip"><i class="fa-brands fa-python"></i> Python (FastAPI / Flask)</span>
+              <span class="skill-chip"><i class="fa-solid fa-database"></i> PostgreSQL / MySQL</span>
+              <span class="skill-chip"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+              <span class="skill-chip"><i class="fa-solid fa-network-wired"></i> RESTful & GraphQL APIs</span>
+              <span class="skill-chip"><i class="fa-solid fa-shield-halved"></i> JWT & OAuth Auth</span>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="cat-icon cat-devops"><i class="fa-solid fa-cloud"></i></div>
+              <div>
+                <h3>DevOps & Cloud</h3>
+                <span class="cat-desc">Deployment, containers & CI/CD</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git & GitHub Actions</span>
+              <span class="skill-chip"><i class="fa-brands fa-aws"></i> AWS (S3, Lambda)</span>
+              <span class="skill-chip"><i class="fa-solid fa-server"></i> Vercel & Render</span>
+              <span class="skill-chip"><i class="fa-brands fa-linux"></i> Linux CLI / Bash</span>
+              <span class="skill-chip"><i class="fa-solid fa-vial-circle-check"></i> Jest / PyTest</span>
+            </div>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="skill-category-card glass-panel">
+            <div class="category-header">
+              <div class="cat-icon cat-core"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <h3>Core Computer Science</h3>
+                <span class="cat-desc">Foundational problem solving</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip"><i class="fa-solid fa-sitemap"></i> Data Structures & Algos</span>
+              <span class="skill-chip"><i class="fa-solid fa-cubes-stacked"></i> Object-Oriented Design</span>
+              <span class="skill-chip"><i class="fa-solid fa-database"></i> Database Indexing & Normalization</span>
+              <span class="skill-chip"><i class="fa-solid fa-diagram-project"></i> System Design Basics</span>
+              <span class="skill-chip"><i class="fa-solid fa-code-compare"></i> Agile / Scrum Workflow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications showcasing full-stack capabilities, clean code, and user
+            empathy</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="projects-filter-bar" id="projectFilters">
+          <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-btn" data-filter="web">Full Stack Web</button>
+          <button class="filter-btn" data-filter="ai">AI / Machine Learning</button>
+          <button class="filter-btn" data-filter="tools">Developer Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1 -->
+          <div class="project-card glass-panel" data-category="web" data-project-id="1">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+                alt="DevPulse Analytics Dashboard" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="1">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">Full Stack</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">React</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">Chart.js</span>
+              </div>
+              <h3 class="project-title">DevPulse - Real-time Developer Analytics Dashboard</h3>
+              <p class="project-desc">
+                A collaborative web platform that aggregates GitHub repository metrics, PR velocity, and test coverage
+                into real-time interactive visual charts.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="1" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-panel" data-category="ai" data-project-id="2">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80"
+                alt="NeuroDoc AI Assistant" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="2">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">AI / ML</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">LangChain</span>
+                <span class="badge">React</span>
+              </div>
+              <h3 class="project-title">NeuroDoc - AI Technical Documentation Assistant</h3>
+              <p class="project-desc">
+                RAG-powered conversational engine that indexes complex codebases and API docs to deliver instant
+                contextual explanations and code solutions.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="2" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-panel" data-category="web" data-project-id="3">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=80"
+                alt="CollabSpace Kanban" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="3">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">Web App</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">TypeScript</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">Socket.io</span>
+                <span class="badge">Tailwind</span>
+              </div>
+              <h3 class="project-title">CollabSpace - Realtime Collaborative Kanban</h3>
+              <p class="project-desc">
+                High-performance project task manager with sub-second drag-and-drop state sync, live cursor presence,
+                and role-based permissions.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="3" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card glass-panel" data-category="tools" data-project-id="4">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80"
+                alt="GitPulse CLI tool" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="4">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">Dev Tool</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">Node.js</span>
+                <span class="badge">Commander.js</span>
+                <span class="badge">Inquirer</span>
+                <span class="badge">npm</span>
+              </div>
+              <h3 class="project-title">QuickScaffold - Interactive Project Generator CLI</h3>
+              <p class="project-desc">
+                Open-source CLI tool published on npm that automates production-ready boilerplate generation with
+                linting, testing, and Docker setup in seconds.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Package
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="4" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card glass-panel" data-category="ai" data-project-id="5">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&auto=format&fit=crop&q=80"
+                alt="VisionGuard Smart Security" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="5">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">AI / CV</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">Python</span>
+                <span class="badge">OpenCV</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">Flask</span>
+              </div>
+              <h3 class="project-title">VisionGuard - Edge Object Detection & Alerting</h3>
+              <p class="project-desc">
+                Real-time computer vision system built for hackathon competition that detects specific anomalies on live
+                camera streams with 94.8% precision.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="5" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card glass-panel" data-category="web" data-project-id="6">
+            <div class="project-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&auto=format&fit=crop&q=80"
+                alt="CryptoTrace Tracker" loading="lazy" class="project-img" />
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-details-btn" data-project="6">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+              </div>
+              <span class="project-tag-badge">FinTech</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge">React</span>
+                <span class="badge">Redux Toolkit</span>
+                <span class="badge">CoinGecko API</span>
+                <span class="badge">CSS Grid</span>
+              </div>
+              <h3 class="project-title">CryptoTrace - Market Intel & Portfolio Tracker</h3>
+              <p class="project-desc">
+                Responsive single-page web application featuring live price streaming, currency conversions, interactive
+                historical trend graphs, and P&L tracking.
+              </p>
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"
+                    title="View Source Code">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-btn primary"
+                    title="View Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                </div>
+                <button class="modal-trigger-btn" data-project="6" title="Learn More">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section class="experience-section section-padding" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-timeline"></i> Journey & Milestones</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">Academic accomplishments, leadership roles, and hands-on technical experience</p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+          <!-- Timeline item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Undergraduate Research Assistant (Web & Data)</h3>
+                  <span class="timeline-org"><i class="fa-solid fa-building-columns"></i> University Distributed Systems
+                    Lab</span>
+                </div>
+                <span class="timeline-date">Sep 2025 - Present</span>
+              </div>
+              <p class="timeline-desc">
+                Collaborating with professors and PhD candidates to build benchmarking visualization tools for
+                distributed data caching protocols using React and Node.js.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Engineered interactive telemetry dashboards reducing researcher data analysis turnaround by 40%.
+                </li>
+                <li>Implemented automated API integration testing pipeline using Jest and Docker.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="badge">React</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">1st Place Winner - CalHacks Collegiate Hackathon</h3>
+                  <span class="timeline-org"><i class="fa-solid fa-award"></i> Major League Hacking</span>
+                </div>
+                <span class="timeline-date">Nov 2025</span>
+              </div>
+              <p class="timeline-desc">
+                Led a team of 4 to design and ship an AI-assisted accessible navigation tool within 36 hours, taking
+                first place among 60+ competitive collegiate teams.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Built real-time audio-visual assistive interface with WebSockets and Gemini API.</li>
+                <li>Pitched live demonstration to panel of industry judges and sponsor engineers.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="badge">FastAPI</span>
+                <span class="badge">WebSockets</span>
+                <span class="badge">GenAI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">B.S. in Computer Science</h3>
+                  <span class="timeline-org"><i class="fa-solid fa-school"></i> State University of Technology</span>
+                </div>
+                <span class="timeline-date">Aug 2023 - May 2027 (Expected)</span>
+              </div>
+              <p class="timeline-desc">
+                Dean's Honor List (GPA: 3.92/4.0). Active member of ACM Student Chapter and Google Developer Student
+                Clubs.
+              </p>
+              <ul class="timeline-bullets">
+                <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Systems Programming, Database
+                  Systems, Web Application Architecture, Machine Learning Foundations, Software Engineering Principles.
+                </li>
+                <li><strong>Leadership:</strong> Tech Workshop Lead for freshman CS mentoring program.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="badge">GPA: 3.92</span>
+                <span class="badge">Dean's List</span>
+                <span class="badge">ACM Club</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Callout / Pitch Section -->
+    <section class="pitch-section section-padding">
+      <div class="container">
+        <div class="pitch-box glass-panel text-center">
+          <div class="pitch-glow"></div>
+          <span class="pitch-badge"><i class="fa-solid fa-handshake"></i> Looking for an Intern?</span>
+          <h2 class="pitch-title">Let's build something remarkable together</h2>
+          <p class="pitch-desc">
+            I am eager to contribute, learn from seasoned engineers, and bring positive energy and quality code to your
+            engineering team for Summer / Fall 2026.
+          </p>
+          <div class="pitch-cta">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Get In Touch Today</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-regular fa-envelope"></i> Contact Me</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Have an internship opening, question, or opportunity? My inbox is always open!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info">
+            <div class="info-card glass-panel">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-text">
+                <span class="info-label">Email</span>
+                <a href="mailto:alex.morgan.intern@example.com" class="info-value">alex.morgan.intern@example.com</a>
+              </div>
+              <button class="copy-btn" id="copyEmailBtn" data-email="alex.morgan.intern@example.com"
+                title="Copy email to clipboard">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="info-text">
+                <span class="info-label">LinkedIn</span>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                  class="info-value">linkedin.com/in/alexmorgan-dev</a>
+              </div>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="external-link-btn"
+                title="Open LinkedIn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="info-text">
+                <span class="info-label">GitHub</span>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                  class="info-value">github.com/alexmorgan-dev</a>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="external-link-btn"
+                title="Open GitHub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="info-card glass-panel">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <span class="info-label">Location</span>
+                <span class="info-value">San Francisco Bay Area, CA (Open to Remote / Relocation)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper glass-panel">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nameInput">Your Name <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="nameInput" name="name" placeholder="Jane Doe / Recruiter Name" required />
+                  </div>
+                  <span class="form-error" id="nameError">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="emailInput">Your Email <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="emailInput" name="email" placeholder="jane@company.com" required />
+                  </div>
+                  <span class="form-error" id="emailError">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subjectInput">Subject <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-bookmark input-icon"></i>
+                  <input type="text" id="subjectInput" name="subject"
+                    placeholder="Internship Opportunity / Project Inquiry" required />
+                </div>
+                <span class="form-error" id="subjectError">Please enter a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label for="messageInput">Message <span class="required">*</span></label>
+                <textarea id="messageInput" name="message" rows="5"
+                  placeholder="Hi Alex, we'd love to chat with you about an internship opening at our company..."
+                  required></textarea>
+                <span class="form-error" id="messageError">Please enter a message (at least 10 characters)</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="submitBtn">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal Popup -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog glass-panel">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal window">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="logo-badge">&lt;AM/&gt;</span>
+        <p>© 2026 Alex Morgan. Built with modern HTML5, Vanilla CSS, and JavaScript. Designed for high performance.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
