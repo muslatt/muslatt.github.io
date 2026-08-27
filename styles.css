@@ -431,9 +431,16 @@ button, input, textarea {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 820px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -1642,11 +1649,7 @@ button, input, textarea {
     justify-content: center;
   }
 
-  .hero-visual {
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
-  }
+
 
   .about-grid {
     grid-template-columns: 1fr;

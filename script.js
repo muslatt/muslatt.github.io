@@ -53,10 +53,10 @@ function initTypingEffect() {
   if (!typingElement) return;
 
   const phrases = [
-    'Full-Stack Web Apps',
-    'Scalable Cloud APIs',
-    'Modern React & Next.js UIs',
-    'AI-Powered Software Tools'
+    'Tailwind & Bootstrap UIs',
+    'Responsive Front-End Sites',
+    'AI-Assisted Web Projects',
+    'School & Web Applications'
   ];
 
   let phraseIndex = 0;
@@ -133,13 +133,12 @@ const projectData = {
     tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'GitHub REST API'],
     description: 'DevPulse aggregates GitHub metrics, PR turnaround velocity, commit frequency, and automated test coverage across engineering teams into unified visual charts.',
     features: [
-      'Engineered OAuth2 authentication flow with GitHub Webhooks for real-time repository telemetry.',
-      'Implemented responsive data visualization widgets utilizing Chart.js and Tailwind UI components.',
-      'Designed PostgreSQL schema with optimized indexing for multi-tenant query acceleration.',
-      'Containerized development and deployment environment using Docker.'
+      "Built responsive layout using Tailwind CSS",
+      "Designed clean navigation using Bootstrap components",
+      "Utilized AI assistance to speed up code creation"
     ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    github: "https://github.com/muslatt/miguelportfolio",
+    demo: "https://github.com/muslatt/miguelportfolio"
   },
   2: {
     title: 'NeuroDoc - AI Technical Documentation Assistant',
