@@ -142,76 +142,49 @@ const projectData = {
     demo: 'https://github.com/BustedElbow/newBarangayProfiling'
   },
   2: {
-    title: 'NeuroDoc - AI Technical Documentation Assistant',
-    category: 'AI / Machine Learning',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&auto=format&fit=crop&q=80',
-    tags: ['Python', 'FastAPI', 'LangChain', 'OpenAI / Gemini API', 'ChromaDB', 'React'],
-    description: 'An intelligent retrieval-augmented generation (RAG) assistant designed for software engineering teams to parse repositories and API documentations in seconds.',
+    title: 'Agapay - Community & Emergency Relief Management Platform',
+    category: 'Community Web Platform',
+    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1000&auto=format&fit=crop&q=80',
+    tags: ['Tailwind CSS', 'Bootstrap', 'JavaScript', 'REST API', 'Admin Dashboard'],
+    description: 'A unified 3-tier community disaster relief & assistance management platform consisting of a user-facing frontend application, a dedicated administrative control portal, and a backend REST API service across 3 dedicated repositories.',
     features: [
-      'Built vector search pipeline with ChromaDB and semantic embeddings to index markdown and code files.',
-      'Implemented FastAPI backend with asynchronous streaming responses for near-zero perceived latency.',
-      'Integrated markdown code block syntax highlighting with copy-to-clipboard functionality.',
-      'Configured evaluation metrics to verify answer relevance and eliminate hallucinations.'
+      'Agapay Frontend: User portal for community requests and assistance (https://github.com/BustedElbow/agapay-frontend).',
+      'Agapay Admin: Comprehensive management dashboard for status monitoring and inventory tracking (https://github.com/BustedElbow/agapay-admin).',
+      'Agapay Backend: Centralized REST API service coordinating data communication across applications (https://github.com/BustedElbow/agapay-backend).',
+      'Engineered with responsive Tailwind CSS & Bootstrap UI elements and AI-assisted prototyping.'
     ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    github: 'https://github.com/BustedElbow/agapay-frontend',
+    demo: 'https://github.com/BustedElbow/agapay-admin'
   },
   3: {
-    title: 'CollabSpace - Realtime Collaborative Kanban',
-    category: 'Full Stack Web App',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1000&auto=format&fit=crop&q=80',
-    tags: ['TypeScript', 'Next.js', 'Socket.io', 'Node.js', 'TailwindCSS', 'Redis'],
-    description: 'A slick, agile project workspace enabling distributed teams to organize sprints, assign story points, and collaborate with sub-second drag-and-drop state syncing.',
+    title: 'IT13 CRMS - Citizen & Record Management System',
+    category: 'Record Management System',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&auto=format&fit=crop&q=80',
+    tags: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'PHP'],
+    description: 'A centralized institutional record management system designed for organized data entry, record searching, resident clearance tracking, and administrative report generation.',
     features: [
-      'Real-time multi-user cursor presence and live card updates using WebSockets & Redis Pub/Sub.',
-      'Drag-and-drop task reordering with optimistic UI updates and conflict resolution.',
-      'Role-based access control (Admin, Member, Guest) with JWT authentication.',
-      'Automated dark mode theme support and keyboard accessibility shortcuts.'
+      'Designed responsive dashboard layouts using Bootstrap and custom CSS.',
+      'Implemented structured data forms for fast citizen record registration and lookup.',
+      'Integrated AI tools to streamline component prototyping and debug script interactions.',
+      'Hosted open-source on GitHub for collaborative development.'
     ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    github: 'https://github.com/DANZPH/IT13CRMS',
+    demo: 'https://github.com/DANZPH/IT13CRMS'
   },
   4: {
-    title: 'QuickScaffold - Interactive Project Generator CLI',
-    category: 'Developer Tools',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&auto=format&fit=crop&q=80',
-    tags: ['Node.js', 'JavaScript', 'Commander.js', 'Inquirer.js', 'npm', 'ESLint'],
-    description: 'A modular, high-speed CLI tool published to npm that helps engineers generate robust boilerplate structures for modern full-stack web and API projects.',
+    title: 'IT15 Real Estate - Property & Listing Portal',
+    category: 'Real Estate Web Portal',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1000&auto=format&fit=crop&q=80',
+    tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Real Estate'],
+    description: 'A modern web platform for real estate property browsing, listing search filters, property details showcase, and client inquiry handling.',
     features: [
-      'Interactive CLI prompts to customize framework, testing suite, and CI/CD pipelines in seconds.',
-      'Built-in validation, automated git repository initialization, and initial commit creation.',
-      'Downloaded over 2,500+ times by fellow student developers and open source contributors.'
+      'Crafted clean property card grids and detailed listing view layouts with Tailwind CSS & Bootstrap.',
+      'Implemented search & filter UI controls for location, price range, and property category.',
+      'Accelerated design and development using AI-assisted code generation.',
+      'Full repository published and versioned on GitHub.'
     ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
-  },
-  5: {
-    title: 'VisionGuard - Edge Object Detection & Alerting',
-    category: 'AI & Computer Vision',
-    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1000&auto=format&fit=crop&q=80',
-    tags: ['Python', 'OpenCV', 'PyTorch', 'YOLOv8', 'Flask', 'WebRTC'],
-    description: 'Edge-compatible computer vision security system capable of detecting anomalies and objects across multiple live camera streams with instant alerts.',
-    features: [
-      'Trained and fine-tuned custom YOLOv8 model weights achieving 94.8% mAP on custom datasets.',
-      'Built Flask REST API with WebRTC video streaming support.',
-      'Won Best Hardware / Edge AI project at collegiate hackathon.'
-    ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
-  },
-  6: {
-    title: 'CryptoTrace - Market Intel & Portfolio Tracker',
-    category: 'FinTech Web App',
-    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1000&auto=format&fit=crop&q=80',
-    tags: ['React', 'Redux Toolkit', 'CoinGecko REST API', 'Chart.js', 'CSS Grid'],
-    description: 'Modern financial web platform providing live cryptocurrency price tracking, interactive historical charts, market sentiment metrics, and portfolio tracking.',
-    features: [
-      'Sub-minute polling for live market quotes with local caching to preserve API rate limits.',
-      'Interactive historical time-range filters (24H, 7D, 30D, 1Y) with custom tooltip overlays.',
-      'Simulated paper-trading portfolio ledger with live P&L percentage calculators.'
-    ],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    github: 'https://github.com/RonVergel/IT15RealEstate',
+    demo: 'https://github.com/RonVergel/IT15RealEstate'
   }
 };
 
