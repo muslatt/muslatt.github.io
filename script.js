@@ -4,14 +4,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
-  initTypingEffect();
   initProjectFiltersAndModals();
-  initHeroCardTilt();
-  initContactForm();
   initCopyEmail();
   initMobileMenu();
   initScrollSpyAndToTop();
   initResumeDownload();
+  initCertPdfViewer();
 });
 
 /* -------------------------------------------------------------------
@@ -28,7 +26,7 @@ function initThemeToggle() {
   themeToggle.addEventListener('click', () => {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     const newTheme = isDark ? 'light' : 'dark';
-    
+
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('portfolio-theme', newTheme);
     updateThemeIcon(themeToggle, newTheme);
@@ -46,112 +44,33 @@ function updateThemeIcon(button, theme) {
 }
 
 /* -------------------------------------------------------------------
-   2. Typing Effect in Hero Section
-   ------------------------------------------------------------------- */
-function initTypingEffect() {
-  const typingElement = document.getElementById('typingElement');
-  if (!typingElement) return;
-
-  const phrases = [
-    'Tailwind & Bootstrap UIs',
-    'Responsive Front-End Sites',
-    'AI-Assisted Web Projects',
-    'School & Web Applications'
-  ];
-
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 90;
-
-  function type() {
-    const currentPhrase = phrases[phraseIndex];
-    
-    if (isDeleting) {
-      typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-      charIndex--;
-      typingSpeed = 45;
-    } else {
-      typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-      charIndex++;
-      typingSpeed = 90;
-    }
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      // Pause at complete word
-      typingSpeed = 1800;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 450;
-    }
-
-    setTimeout(type, typingSpeed);
-  }
-
-  type();
-}
-
-/* -------------------------------------------------------------------
-   3. Interactive 3D Card Tilt Effect
-   ------------------------------------------------------------------- */
-function initHeroCardTilt() {
-  const card = document.getElementById('heroCard');
-  if (!card) return;
-
-  // Only run tilt on devices that support hover/pointers
-  if (window.matchMedia('(hover: hover)').matches) {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = ((y - centerY) / centerY) * -9;
-      const rotateY = ((x - centerX) / centerX) * 9;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-    });
-  }
-}
-
-/* -------------------------------------------------------------------
-   4. Project Filters & Detailed Modal Viewer
+   2. Project Filters & Detailed Modal Viewer
    ------------------------------------------------------------------- */
 const projectData = {
   1: {
     title: 'Barangay Resident Profiling System',
     category: 'Web Information System',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&auto=format&fit=crop&q=80',
-    tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Web System'],
+    tags: ['Blade', 'PHP', 'Tailwind'],
     description: 'A digital information & profiling management system built to streamline barangay resident demographics, household records, and community administrative services.',
     features: [
-      'Developed responsive UI components using Tailwind CSS and Bootstrap for clean admin navigation.',
-      'Structured resident profiling data tables with fast search, filtering, and record views.',
-      'Leveraged AI-assisted workflows to accelerate frontend layout design and rapid bug resolution.',
+      'Developed responsive UI components using Blade templates and Tailwind CSS for clean administrative navigation.',
+      'Structured resident profiling data tables with fast search, filtering, and record views built on PHP.',
+      'Accelerated development speed and rapid prototyping.',
       'Organized modular codebase versioned and hosted on GitHub.'
     ],
     github: 'https://github.com/BustedElbow/newBarangayProfiling',
     demo: 'https://github.com/BustedElbow/newBarangayProfiling'
   },
   2: {
-    title: 'Agapay - Community & Emergency Relief Management Platform',
-    category: 'Community Web Platform',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1000&auto=format&fit=crop&q=80',
-    tags: ['Tailwind CSS', 'Bootstrap', 'JavaScript', 'REST API', 'Admin Dashboard'],
-    description: 'A unified 3-tier community disaster relief & assistance management platform consisting of a user-facing frontend application, a dedicated administrative control portal, and a backend REST API service across 3 dedicated repositories.',
+    title: 'Agapay - Patient-Therapist Matching Platform',
+    category: 'Capstone / Thesis',
+    tags: ['Capstone / Thesis', 'TypeScript', 'JavaScript', 'C#', 'React Native Expo'],
+    description: 'Agapay is a cross-platform mobile application designed to bridge the accessibility gap between patients and licensed physical therapists in Davao City.',
     features: [
-      'Agapay Frontend: User portal for community requests and assistance (https://github.com/BustedElbow/agapay-frontend).',
-      'Agapay Admin: Comprehensive management dashboard for status monitoring and inventory tracking (https://github.com/BustedElbow/agapay-admin).',
-      'Agapay Backend: Centralized REST API service coordinating data communication across applications (https://github.com/BustedElbow/agapay-backend).',
-      'Engineered with responsive Tailwind CSS & Bootstrap UI elements and AI-assisted prototyping.'
+      'Agapay Mobile & Web Frontend: Built with TypeScript, JavaScript, and React Native Expo for cross-platform patient-therapist matching.',
+      'Agapay Core & Backend: Powered by C# for backend business logic, appointments, and user management.',
+      'Multi-tier architecture coordinating data communication across mobile app, admin portal, and backend API.',
+      'Designed and engineered as a Capstone / Thesis project focusing on healthcare accessibility.'
     ],
     github: 'https://github.com/BustedElbow/agapay-frontend',
     demo: 'https://github.com/BustedElbow/agapay-admin'
@@ -159,13 +78,12 @@ const projectData = {
   3: {
     title: 'IT13 CRMS - Citizen & Record Management System',
     category: 'Record Management System',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1000&auto=format&fit=crop&q=80',
-    tags: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'PHP'],
+    tags: ['C#'],
     description: 'A centralized institutional record management system designed for organized data entry, record searching, resident clearance tracking, and administrative report generation.',
     features: [
-      'Designed responsive dashboard layouts using Bootstrap and custom CSS.',
+      'Engineered robust management software using C#.',
       'Implemented structured data forms for fast citizen record registration and lookup.',
-      'Integrated AI tools to streamline component prototyping and debug script interactions.',
+      'Streamlined component logic and record processing interactions.',
       'Hosted open-source on GitHub for collaborative development.'
     ],
     github: 'https://github.com/DANZPH/IT13CRMS',
@@ -174,13 +92,12 @@ const projectData = {
   4: {
     title: 'IT15 Real Estate - Property & Listing Portal',
     category: 'Real Estate Web Portal',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1000&auto=format&fit=crop&q=80',
-    tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Real Estate'],
+    tags: ['HTML', 'C#', 'CSS'],
     description: 'A modern web platform for real estate property browsing, listing search filters, property details showcase, and client inquiry handling.',
     features: [
-      'Crafted clean property card grids and detailed listing view layouts with Tailwind CSS & Bootstrap.',
+      'Crafted clean property card grids and detailed listing layouts using HTML, CSS, and C#.',
       'Implemented search & filter UI controls for location, price range, and property category.',
-      'Accelerated design and development using AI-assisted code generation.',
+      'Accelerated design and backend integration for rapid deployment.',
       'Full repository published and versioned on GitHub.'
     ],
     github: 'https://github.com/RonVergel/IT15RealEstate',
@@ -204,7 +121,6 @@ function initProjectFiltersAndModals() {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease';
         } else {
           card.style.display = 'none';
         }
@@ -223,8 +139,7 @@ function initProjectFiltersAndModals() {
     if (!proj || !modal || !modalBody) return;
 
     modalBody.innerHTML = `
-      <img src="${proj.image}" alt="${proj.title}" class="modal-proj-img" />
-      <span class="project-tag-badge">${proj.category}</span>
+      <span class="project-tag-badge" style="position: static; display: inline-block; margin-bottom: 12px;">${proj.category}</span>
       <h2 class="modal-proj-title">${proj.title}</h2>
       
       <div class="project-tags" style="margin-bottom: 16px;">
@@ -285,69 +200,7 @@ function initProjectFiltersAndModals() {
   });
 }
 
-/* -------------------------------------------------------------------
-   5. Interactive Contact Form with Validation & Feedback
-   ------------------------------------------------------------------- */
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
 
-  const nameInput = document.getElementById('nameInput');
-  const emailInput = document.getElementById('emailInput');
-  const subjectInput = document.getElementById('subjectInput');
-  const messageInput = document.getElementById('messageInput');
-  const submitBtn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let isValid = true;
-
-    // Reset previous errors
-    form.querySelectorAll('.form-group').forEach(group => group.classList.remove('has-error'));
-
-    // Validate Name
-    if (!nameInput.value.trim()) {
-      nameInput.closest('.form-group').classList.add('has-error');
-      isValid = false;
-    }
-
-    // Validate Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
-      emailInput.closest('.form-group').classList.add('has-error');
-      isValid = false;
-    }
-
-    // Validate Subject
-    if (!subjectInput.value.trim()) {
-      subjectInput.closest('.form-group').classList.add('has-error');
-      isValid = false;
-    }
-
-    // Validate Message
-    if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
-      messageInput.closest('.form-group').classList.add('has-error');
-      isValid = false;
-    }
-
-    if (!isValid) {
-      showToast('⚠️ Please check the form errors before submitting.');
-      return;
-    }
-
-    // Simulate sending message
-    const originalBtnContent = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending Message...</span>`;
-
-    setTimeout(() => {
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnContent;
-      showToast('🎉 Message sent successfully! Alex will get back to you shortly.');
-    }, 1200);
-  });
-}
 
 /* -------------------------------------------------------------------
    6. Copy Email to Clipboard
@@ -450,6 +303,77 @@ function initResumeDownload() {
 
   downloadBtn.addEventListener('click', () => {
     showToast('📄 Resume downloaded (Sample placeholder). Link your real PDF here!');
+  });
+}
+
+/* -------------------------------------------------------------------
+   Certificate PDF Viewer Modal
+   ------------------------------------------------------------------- */
+function initCertPdfViewer() {
+  const certModal = document.getElementById('certPdfModal');
+  const certFrame = document.getElementById('certPdfFrame');
+  const certTitle = document.getElementById('certModalTitle');
+  const certCloseBtn = document.getElementById('certModalClose');
+  const certDownload = document.getElementById('certModalDownload');
+  const certOpenTab = document.getElementById('certModalOpen');
+  const certPreviews = document.querySelectorAll('.cert-preview[data-pdf]');
+
+  if (!certModal || !certFrame || certPreviews.length === 0) return;
+
+  // Modal open/close
+  function openCertModal(pdfPath, title) {
+    certFrame.src = pdfPath;
+    certTitle.textContent = title || 'Certificate';
+    certDownload.href = pdfPath;
+    certOpenTab.href = pdfPath;
+
+    certModal.classList.add('open');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    certModal.classList.remove('open');
+    certModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+      certFrame.src = '';
+    }, 350);
+  }
+
+  certPreviews.forEach(preview => {
+    const pdfPath = preview.getAttribute('data-pdf');
+    const card = preview.closest('.cert-card');
+    const titleEl = card ? card.querySelector('.cert-title') : null;
+    const certName = titleEl ? titleEl.textContent : 'Certificate';
+
+    preview.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openCertModal(pdfPath, certName);
+    });
+
+    preview.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCertModal(pdfPath, certName);
+      }
+    });
+  });
+
+  if (certCloseBtn) {
+    certCloseBtn.addEventListener('click', closeCertModal);
+  }
+
+  certModal.addEventListener('click', (e) => {
+    if (e.target === certModal) closeCertModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal.classList.contains('open')) {
+      closeCertModal();
+    }
   });
 }
 
