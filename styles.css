@@ -987,36 +987,91 @@ textarea {
 .project-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
+  margin-top: auto;
+  padding-top: 18px;
   border-top: 1px solid var(--border-glass);
 }
 
-.project-links {
+.project-source-btn,
+.link-btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.link-btn {
-  font-size: 0.88rem;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 20px;
+  font-size: 0.9rem;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-secondary);
-}
-
-.link-btn:hover {
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
   color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.link-btn.primary {
-  color: var(--accent-cyan);
+.project-source-btn i.fa-brands,
+.link-btn i.fa-brands {
+  font-size: 1.15rem;
+  color: var(--accent-amber);
+  transition: transform var(--transition-fast);
 }
 
-.link-btn.primary:hover {
-  color: #67e8f9;
+.project-source-btn span,
+.link-btn span {
+  letter-spacing: 0.3px;
+}
+
+.project-source-btn i.fa-arrow-up-right-from-square,
+.link-btn i.fa-arrow-up-right-from-square {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin-left: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.project-source-btn:hover,
+.link-btn:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--accent-amber);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+}
+
+.project-source-btn:hover i.fa-brands,
+.link-btn:hover i.fa-brands {
+  transform: scale(1.15);
+}
+
+.project-source-btn:hover i.fa-arrow-up-right-from-square,
+.link-btn:hover i.fa-arrow-up-right-from-square {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.project-source-btn:active,
+.link-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .project-source-btn,
+[data-theme="light"] .link-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(217, 119, 6, 0.25);
+  color: #1c1917;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .project-source-btn:hover,
+[data-theme="light"] .link-btn:hover {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: var(--accent-primary);
+  color: #b45309;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.2);
 }
 
 .modal-trigger-btn {
@@ -1076,6 +1131,7 @@ textarea {
 .cert-network { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
 .cert-sec { background: rgba(16, 185, 129, 0.15); color: #34d399; }
 .cert-cyber { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.cert-react { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
 
 .cert-issuer {
   font-size: 0.75rem;
