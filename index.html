@@ -33,6 +33,10 @@
   <meta property="twitter:image"
     content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop&q=80" />
 
+  <!-- Favicon / Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+
   <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,11 +79,10 @@
 
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a></li>
+          <li><a href="#hero" class="nav-link"><i class="fa-regular fa-user"></i> About</a></li>
           <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
           <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
           <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i> Certifications</a></li>
-          <li><a href="#experience" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Experience</a></li>
           <li><a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> Contact</a></li>
         </ul>
 
@@ -108,21 +111,25 @@
     <section class="hero-section section-padding" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span>Aspiring Frontend Developer • AI-Assisted Project Builder</span>
-          </div>
-
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Miguel</span>
+            Hi, I'm <span class="gradient-text">Miguel Andrei Tan
           </h1>
 
-          <p class="hero-subtitle">
-            I am an aspiring developer leaning heavily into <strong>front-end development</strong>. I craft web and
-            school projects mainly using <strong>Tailwind CSS</strong> and <strong>Bootstrap</strong>, actively
-            leveraging <strong>AI tools</strong> to accelerate my learning, bridge technical gaps, and bring creative
-            ideas to life.
-          </p>
+          <div class="hero-intro-text">
+            <p class="hero-subtitle">
+              I am an aspiring developer with a strong focus on <strong>front-end web development</strong>. Most of the
+              projects I’ve built so far are school and personal projects where I craft clean, responsive user
+              interfaces.
+            </p>
+            <p class="hero-detail">
+              I have hands-on experience using popular CSS frameworks like <strong>Tailwind CSS</strong> and
+              <strong>Bootstrap</strong> alongside core web technologies (<strong>HTML5</strong>, <strong>CSS3</strong>,
+              and <strong>JavaScript</strong>). While actively on my journey toward mastering web development, I utilize
+              <strong>AI assistance</strong> across my projects to quickly solve challenges, experiment with modern UI
+              layouts,
+              learn new frameworks faster, and deliver clean, functional projects.
+            </p>
+          </div>
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
@@ -137,40 +144,6 @@
               <i class="fa-solid fa-file-arrow-down"></i>
               <span>Resume</span>
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section section-padding" id="about">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag"><i class="fa-regular fa-id-card"></i> About Me</span>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card glass-panel">
-            <div class="about-card-header">
-              <div class="icon-box">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <h3>Who I Am</h3>
-            </div>
-            <p>
-              Hi, I'm <strong>Miguel</strong>! I am an aspiring developer with a strong focus on <strong>front-end web
-                development</strong>. Most of the projects I’ve built so far are school and personal projects where I
-              craft clean, responsive user interfaces.
-            </p>
-            <p>
-              I have hands-on experience using popular CSS frameworks like <strong>Tailwind CSS</strong> and
-              <strong>Bootstrap</strong> alongside core web technologies (HTML5, CSS3, and JavaScript).
-            </p>
-            <p>
-              While I am still on my journey toward mastering web development, I actively utilize <strong>AI
-                assistance</strong> across my projects. Working alongside AI allows me to quickly solve challenges,
-              experiment with modern UI layouts, learn new frameworks faster, and deliver clean, functional projects.
-            </p>
           </div>
         </div>
       </div>
@@ -280,7 +253,7 @@
                 and licensed physical therapists in Davao City.
               </p>
               <div class="project-footer">
-                <a href="https://github.com/BustedElbow/agapay-frontend" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/LastElbow/agapay" target="_blank" rel="noopener noreferrer"
                   class="project-source-btn" title="View Source Code on GitHub">
                   <i class="fa-brands fa-github"></i>
                   <span>Source</span>
@@ -290,34 +263,8 @@
             </div>
           </div>
 
-          <!-- Project 2: Barangay Resident Profiling -->
-          <div class="project-card glass-panel" data-category="systems" data-project-id="1">
-            <div class="project-content">
-              <div class="project-header-meta">
-                <span class="project-tag-badge">Web App</span>
-              </div>
-              <div class="project-tags">
-                <span class="badge">Blade</span>
-                <span class="badge">PHP</span>
-                <span class="badge">Tailwind</span>
-              </div>
-              <h3 class="project-title">Barangay Resident Profiling System</h3>
-              <p class="project-desc">
-                A digital information management system designed for barangay resident demographics, household
-                profiling, and community administrative record management.
-              </p>
-              <div class="project-footer">
-                <a href="https://github.com/BustedElbow/newBarangayProfiling" target="_blank" rel="noopener noreferrer"
-                  class="project-source-btn" title="View Source Code on GitHub">
-                  <i class="fa-brands fa-github"></i>
-                  <span>Source</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- Project 3: IT13 CRMS -->
+          <!-- Project 2: IT13 CRMS -->
           <div class="project-card glass-panel" data-category="systems" data-project-id="3">
             <div class="project-content">
               <div class="project-header-meta">
@@ -326,7 +273,7 @@
               <div class="project-tags">
                 <span class="badge">C#</span>
               </div>
-              <h3 class="project-title">IT13 CRMS - Citizen & Record Management System</h3>
+              <h3 class="project-title">IT13 CRMS - Property & Listing Customer Relationship Management System</h3>
               <p class="project-desc">
                 A centralized institutional record management system built for streamlined citizen registration, record
                 searching, clearance tracking, and reports.
@@ -342,7 +289,7 @@
             </div>
           </div>
 
-          <!-- Project 4: IT15 Real Estate -->
+          <!-- Project 3: IT15 Real Estate -->
           <div class="project-card glass-panel" data-category="portal" data-project-id="4">
             <div class="project-content">
               <div class="project-header-meta">
@@ -353,7 +300,8 @@
                 <span class="badge">C#</span>
                 <span class="badge">CSS</span>
               </div>
-              <h3 class="project-title">IT15 Real Estate - Property & Listing Portal</h3>
+              <h3 class="project-title">IT15 Real Estate - Property & Listing Customer Relationship Management System
+              </h3>
               <p class="project-desc">
                 A modern web platform for real estate property browsing, listing search filters, property details
                 showcase, and client inquiry handling.
@@ -379,7 +327,8 @@
         <div class="section-header text-center">
           <span class="section-tag"><i class="fa-solid fa-award"></i> Credentials</span>
           <h2 class="section-title">Certifications</h2>
-          <p class="section-subtitle">Official industry certifications and professional technical training credentials</p>
+          <p class="section-subtitle">Official industry certifications and professional technical training credentials
+          </p>
         </div>
 
         <div class="certifications-grid">
@@ -493,7 +442,8 @@
               </div>
             </div>
             <h3 class="cert-title">Git & GitHub and React.js Training</h3>
-            <p class="cert-desc">Hands-on technical training covering Git version control workflows, collaborative GitHub repository management, and modern React.js frontend component architecture.</p>
+            <p class="cert-desc">Hands-on technical training covering Git version control workflows, collaborative
+              GitHub repository management, and modern React.js frontend component architecture.</p>
             <div class="cert-footer">
               <span class="cert-date"><i class="fa-regular fa-calendar"></i> Sep 05, 2026</span>
               <span class="cert-code" title="Institution"><i class="fa-solid fa-building-columns"></i> UM Davao</span>
@@ -510,26 +460,6 @@
 
 
 
-    <!-- Callout / Pitch Section -->
-    <section class="pitch-section section-padding">
-      <div class="container">
-        <div class="pitch-box glass-panel text-center">
-          <div class="pitch-glow"></div>
-          <span class="pitch-badge"><i class="fa-solid fa-handshake"></i> Looking for an Intern?</span>
-          <h2 class="pitch-title">Let's build something remarkable together</h2>
-          <p class="pitch-desc">
-            I am eager to contribute, learn from seasoned engineers, and bring positive energy and quality code to your
-            engineering team for Summer / Fall 2026.
-          </p>
-          <div class="pitch-cta">
-            <a href="#contact" class="btn btn-primary btn-lg">
-              <i class="fa-regular fa-paper-plane"></i>
-              <span>Get In Touch Today</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="contact-section section-padding" id="contact">
@@ -557,11 +487,8 @@
             <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="info-text">
               <span class="info-label">Phone</span>
-              <a href="tel:09484832643" class="info-value">09484832643</a>
+              <span class="info-value">+63 948 483 2643</span>
             </div>
-            <a href="tel:09484832643" class="external-link-btn" title="Call Phone Number">
-              <i class="fa-solid fa-phone"></i>
-            </a>
           </div>
 
           <div class="info-card glass-panel">
@@ -649,11 +576,10 @@
         <p>© 2026 Miguel. Built with modern HTML5, Vanilla CSS, and JavaScript. Designed for high performance.</p>
       </div>
       <div class="footer-links">
-        <a href="#about">About</a>
+        <a href="#hero">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
-        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
     </div>

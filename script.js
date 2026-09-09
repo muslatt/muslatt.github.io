@@ -47,20 +47,6 @@ function updateThemeIcon(button, theme) {
    2. Project Filters & Detailed Modal Viewer
    ------------------------------------------------------------------- */
 const projectData = {
-  1: {
-    title: 'Barangay Resident Profiling System',
-    category: 'Web Information System',
-    tags: ['Blade', 'PHP', 'Tailwind'],
-    description: 'A digital information & profiling management system built to streamline barangay resident demographics, household records, and community administrative services.',
-    features: [
-      'Developed responsive UI components using Blade templates and Tailwind CSS for clean administrative navigation.',
-      'Structured resident profiling data tables with fast search, filtering, and record views built on PHP.',
-      'Accelerated development speed and rapid prototyping.',
-      'Organized modular codebase versioned and hosted on GitHub.'
-    ],
-    github: 'https://github.com/BustedElbow/newBarangayProfiling',
-    demo: 'https://github.com/BustedElbow/newBarangayProfiling'
-  },
   2: {
     title: 'Agapay - Patient-Therapist Matching Platform',
     category: 'Capstone / Thesis',
@@ -72,8 +58,8 @@ const projectData = {
       'Multi-tier architecture coordinating data communication across mobile app, admin portal, and backend API.',
       'Designed and engineered as a Capstone / Thesis project focusing on healthcare accessibility.'
     ],
-    github: 'https://github.com/BustedElbow/agapay-frontend',
-    demo: 'https://github.com/BustedElbow/agapay-admin'
+    github: 'https://github.com/LastElbow/agapay',
+    demo: 'https://github.com/LastElbow/agapay'
   },
   3: {
     title: 'IT13 CRMS - Citizen & Record Management System',
