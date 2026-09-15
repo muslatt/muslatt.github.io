@@ -284,12 +284,7 @@ function initScrollSpyAndToTop() {
    9. Resume Download Trigger
    ------------------------------------------------------------------- */
 function initResumeDownload() {
-  const downloadBtn = document.getElementById('downloadCvBtn');
-  if (!downloadBtn) return;
-
-  downloadBtn.addEventListener('click', () => {
-    showToast('📄 Resume downloaded (Sample placeholder). Link your real PDF here!');
-  });
+  // Logic handled by initCertPdfViewer now to open modal
 }
 
 /* -------------------------------------------------------------------
@@ -303,8 +298,9 @@ function initCertPdfViewer() {
   const certDownload = document.getElementById('certModalDownload');
   const certOpenTab = document.getElementById('certModalOpen');
   const certPreviews = document.querySelectorAll('.cert-preview[data-pdf]');
+  const resumeBtn = document.getElementById('downloadCvBtn');
 
-  if (!certModal || !certFrame || certPreviews.length === 0) return;
+  if (!certModal || !certFrame) return;
 
   // Modal open/close
   function openCertModal(pdfPath, title) {
@@ -347,6 +343,13 @@ function initCertPdfViewer() {
       }
     });
   });
+
+  if (resumeBtn) {
+    resumeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openCertModal('resume.pdf', 'Miguel Andrei Tan - Resume');
+    });
+  }
 
   if (certCloseBtn) {
     certCloseBtn.addEventListener('click', closeCertModal);
